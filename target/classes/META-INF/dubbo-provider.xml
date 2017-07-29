@@ -7,14 +7,16 @@
     	http://code.alibabatech.com/schema/dubbo
     	http://code.alibabatech.com/schema/dubbo/dubbo.xsd">  
     	
-    <dubbo:application name="dubbo_zookeeper"/>  
-    
-    <dubbo:registry address="zookeeper://" /> 
-     
-    <dubbo:protocol name="dubbo" port="20880" />  
-    
-    <dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoServiceLocal" /> 
-     
-    <!-- <dubbo:reference id="demoServiceRemote" interface="com.alibaba.dubbo.demo.DemoService" />  --> 
+    	<bean id="dubboAndZookeeperServer" class="com.xukai.dubbo.dubbo_zookeeper.imp.DubboAndZookeeperServerImp"/>
+    	
+	    <dubbo:application name="dubbo_zookeeper"/>  
+	    
+	    <dubbo:registry address="zookeeper://" /> 
+	     
+	    <dubbo:protocol name="dubbo" port="20880" />  
+	    
+	    <dubbo:service interface="com.xukai.dubbo.dubbo_zookeeper.DubboAndZookeeperServer" ref="dubboAndZookeeperServer" /> 
+	     
+	    <!-- <dubbo:reference id="demoServiceRemote" interface="com.alibaba.dubbo.demo.DemoService" />  --> 
     
 </beans>
