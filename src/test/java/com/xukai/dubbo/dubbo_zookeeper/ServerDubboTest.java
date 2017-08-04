@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.alibaba.dubbo.container.Main;
 import com.alibaba.dubbo.container.spring.SpringContainer;
 
-public class clienttDubboTest {
+public class ServerDubboTest {
 	static ClassPathXmlApplicationContext context;
 
 	public static void main(String[] args) {
